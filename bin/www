@@ -1,0 +1,9 @@
+#!/usr/bin/nodejs
+var debug = require('debug')('my-application');
+var app = require('../app');
+
+app.set('port', process.env.PORT || 3000);
+
+app.listen(app.get('port'), function() {
+	console.log('magin on'+app.get('port'));
+});
